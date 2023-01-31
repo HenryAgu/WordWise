@@ -1,0 +1,21 @@
+.div1,.div2,.div3{
+    height: 100vh;
+}
+
+.div1{
+    background-color: pink;
+}
+
+.div2{
+    background-color: salmon;
+}
+
+.div3{
+    background-color: yellow;
+}
+
+.sqaure{
+    width: 150px;
+    height: 150px;
+    background-color: fuchsia;
+}
