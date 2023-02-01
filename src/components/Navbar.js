@@ -1,10 +1,31 @@
-import React from 'react';
-import './Navbar.css';
+import React from "react";
+
+// stylesheet
+import "./Navbar.css";
+
+// Navlink
+import { Link } from "react-router-dom";
+
+// assets
+import Logo from "../assets/Logo.svg";
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
-  )
-}
+    <div className="navbar">
+      <nav>
+        <div className="logo">
+          <a href="#top">
+            <img src={Logo} alt="Logo" />
+          </a>
+        </div>
+        <div className="get_started">
+          <Link to="/" className="get_started_btn">
+            Get Started
+          </Link>
+        </div>
+      </nav>
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;

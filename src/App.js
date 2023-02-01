@@ -1,14 +1,14 @@
 import React from "react";
 
-// stylesheet
-import "./App.css";
-
 // React Helmet
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 // components
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
+
+// Router
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
   return (
@@ -19,8 +19,12 @@ const App = () => {
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
       <div className="app">
-        <Navbar/>
-        <Home/>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </BrowserRouter>
       </div>
     </>
   );
