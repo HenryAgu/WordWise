@@ -1,13 +1,17 @@
-import React from 'react';
-import Hero from '../sub components/Hero';
+import React from "react";
+import Hero from "../sub components/Hero";
+import HowItWorks from "../sub components/HowItWorks";
 
 // stylesheet
-import './Home.css';
+import "./Home.css";
 
 const Home = () => {
   return (
-    <Hero/>
-  )
-}
+    <div className="home">
+      <Hero />
+      <HowItWorks />
+    </div>
+  );
+};
 
-export default Home
+export default Home;

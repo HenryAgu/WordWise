@@ -1,7 +1,7 @@
 /* DM Sans Google Font */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 .hero {
-  padding: 100px 0;
+  padding: 80px 0;
   background-color: #f4f8fa;
 }
 .hero .hero_content {
@@ -58,7 +58,7 @@
   transition: all 0.5s;
 }
 .hero .hero_content .hero_text .search_area .search_btn:hover {
-  letter-spacing: 5px;
+  letter-spacing: 10px;
 }
 .hero .hero_content .hero_text h1 {
   font-family: "DM Sans";
