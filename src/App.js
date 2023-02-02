@@ -9,6 +9,7 @@ import Home from "./components/Home";
 
 // Router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </div>
     </>

@@ -3,6 +3,7 @@ import React from "react";
 // Components
 import Benefits from "../sub components/Benefits";
 import CustomerReview from "../sub components/CustomerReview";
+import Feature from "../sub components/Feature";
 import Hero from "../sub components/Hero";
 import HowItWorks from "../sub components/HowItWorks";
 
@@ -16,6 +17,7 @@ const Home = () => {
       <HowItWorks />
       <Benefits/>
       <CustomerReview/>
+      <Feature/>
     </div>
   );
 };

@@ -173,14 +173,25 @@
       align-items: flex-start;
       margin-top: 50px;
 
-      .inner_use_box {
-        align-items: center;
+    }
+    .inner_use_box {
+      align-items: center;
+      gap: 30px;
+    }
+    .step_box {
+      .step_container {
+        grid-template-columns: 1fr 1fr;
         gap: 30px;
-      }
-      .step_box {
-        .step_container {
-          .inner_step_box {
-            padding: 20px;
+        .inner_step_box {
+          padding: 50px;
+          h3 {
+            font-size: 24px;
+            line-height: 31px;
+          }
+          p {
+            font-size: 16px;
+            line-height: 21px;
+            text-align: center;
           }
         }
       }
@@ -192,6 +203,11 @@
 @media only screen and (max-width: 480px) {
   .how_it_works {
     width: 100%;
+    .uses_box{
+      .box1{
+        gap: 30px;
+      }
+    }
     .how_header {
       h2 {
         font-size: 32px;
@@ -202,17 +218,6 @@
       .step_container {
         grid-template-columns: 1fr;
         gap: 30px;
-        .inner_step_box {
-          h3 {
-            font-size: 24px;
-            line-height: 31px;
-          }
-          p {
-            font-size: 16px;
-            line-height: 21px;
-            text-align: center;
-          }
-        }
       }
     }
   }
