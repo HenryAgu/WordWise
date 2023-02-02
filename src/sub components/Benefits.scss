@@ -94,3 +94,82 @@
     }
   }
 }
+
+/* Responsiveness starts here */
+/* Large Screens */
+@media screen and (max-width: 1024px) {
+  .benefit_container {
+    .benefit {
+      width: 85%;
+      .benefit_text {
+        h3 {
+          font-size: 32px;
+          line-height: 42px;
+        }
+      }
+    }
+    .benefit_boxes {
+      .inner_box {
+        padding: 50px;
+      }
+    }
+  }
+}
+
+/* medium screens */
+@media (max-width: 991px) {
+  .benefit_container {
+    .benefit {
+      flex-direction: column;
+      text-align: center;
+      gap: 0;
+
+      .benefit_text {
+        padding: 20px;
+      }
+    }
+  }
+}
+
+/* Small Screens */
+@media only screen and (max-width: 480px) {
+  .benefit_container {
+    .benefit {
+      width: 100%;
+      .benefit_logo img {
+        width: 150px;
+        height: 150px;
+      }
+      .benefit_text {
+        h3 {
+          font-size: 32px;
+          line-height: 42px;
+          text-align: center;
+        }
+      }
+    }
+    .benefit_header {
+      h1 {
+        font-size: 28px;
+        line-height: 36px;
+        text-align: center;
+      }
+    }
+    .benefit_boxes {
+      width: 90%;
+      grid-template-columns: 1fr;
+
+      .inner_box {
+        padding: 30px;
+
+        h3 {
+          font-size: 24px;
+          line-height: 31px;
+        }
+        p {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

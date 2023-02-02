@@ -16,6 +16,10 @@
     justify-content: space-between;
     align-items: center;
 
+    .logo{
+      transition: all 0.5s;
+    }
+    
     .logo:hover{
       animation: spin 1s linear infinite;
       transform-origin: center center;

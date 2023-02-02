@@ -84,3 +84,63 @@
 .benefit_container .benefit_boxes .benefit_box2 {
   background: #f5faff;
 }
+
+/* Responsiveness starts here */
+/* Large Screens */
+@media screen and (max-width: 1024px) {
+  .benefit_container .benefit {
+    width: 85%;
+  }
+  .benefit_container .benefit .benefit_text h3 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .benefit_container .benefit_boxes .inner_box {
+    padding: 50px;
+  }
+}
+/* medium screens */
+@media (max-width: 991px) {
+  .benefit_container .benefit {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+  .benefit_container .benefit .benefit_text {
+    padding: 20px;
+  }
+}
+/* Small Screens */
+@media only screen and (max-width: 480px) {
+  .benefit_container .benefit {
+    width: 100%;
+  }
+  .benefit_container .benefit .benefit_logo img {
+    width: 150px;
+    height: 150px;
+  }
+  .benefit_container .benefit .benefit_text h3 {
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+  }
+  .benefit_container .benefit_header h1 {
+    font-size: 28px;
+    line-height: 36px;
+    text-align: center;
+  }
+  .benefit_container .benefit_boxes {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+  .benefit_container .benefit_boxes .inner_box {
+    padding: 30px;
+  }
+  .benefit_container .benefit_boxes .inner_box h3 {
+    font-size: 24px;
+    line-height: 31px;
+  }
+  .benefit_container .benefit_boxes .inner_box p {
+    width: 100%;
+  }
+}

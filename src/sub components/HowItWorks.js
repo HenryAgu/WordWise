@@ -18,21 +18,21 @@ const HowItWorks = () => {
       <h1>I’m looking for</h1>
       <div className="uses_box">
         <div className="inner_use_box box1">
-          <div className="box_text">A dictionary for learning</div>
+          <div className="box_text">A <span>dictionary</span> for learning</div>
           <div className="box_arrow">
             <img src={blueArrow} alt="" />
           </div>
         </div>
         <div className="inner_use_box box2">
           <div className="box_text">
-            A Scientific and fun way to improve vocabulary
+            A Scientific and fun way to <span>improve vocabulary</span>
           </div>
           <div className="box_arrow">
             <img src={redArrow} alt="" />
           </div>
         </div>
         <div className="inner_use_box box3">
-          <div className="box_text">A better way to teach word</div>
+          <div className="box_text">A better way to <span>teach word</span></div>
           <div className="box_arrow">
             <img src={greenArrow} alt="" />
           </div>

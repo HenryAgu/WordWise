@@ -38,7 +38,7 @@
           border-radius: 6px;
           padding: 0 5px;
 
-          .search_icon{
+          .search_icon {
             color: #676767;
             font-weight: 700;
           }
@@ -61,8 +61,8 @@
           color: #ffffff;
           transition: all 0.5s;
         }
-        .search_btn:hover{
-            letter-spacing: 10px;
+        .search_btn:hover {
+          letter-spacing: 10px;
         }
       }
     }
@@ -84,6 +84,69 @@
     }
     .hero_image img {
       width: 100%;
+    }
+  }
+}
+
+/* Responsiveness starts here */
+/* Large Screens */
+@media screen and (max-width: 1024px) {
+  .hero {
+    .hero_content {
+      .hero_text {
+        h1 {
+          font-weight: 700;
+          font-size: 36px;
+          line-height: 126.52%;
+        }
+        p {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 139.52%;
+        }
+      }
+    }
+  }
+}
+
+/* medium screens */
+@media (max-width: 991px) {
+  .hero {
+    .hero_content {
+      .hero_text {
+        .search_area {
+          h3 {
+            font-weight: 500;
+            font-size: 22px;
+          }
+          .search_btn {
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Small Screens */
+@media only screen and (max-width: 480px) {
+  .hero {
+    padding: 100px 0;
+    .hero_content {
+      flex-direction: column-reverse;
+      .hero_text,
+      .hero_image {
+        width: 100%;
+      }
+      .hero_text {
+        h1 {
+          font-weight: 700;
+          font-size: 34px;
+        }
+        .search_area {
+          width: 90%;
+        }
+      }
     }
   }
 }

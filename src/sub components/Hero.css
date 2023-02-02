@@ -79,3 +79,48 @@
 .hero .hero_content .hero_image img {
   width: 100%;
 }
+
+/* Responsiveness starts here */
+/* Large Screens */
+@media screen and (max-width: 1024px) {
+  .hero .hero_content .hero_text h1 {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 126.52%;
+  }
+  .hero .hero_content .hero_text p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 139.52%;
+  }
+}
+/* medium screens */
+@media (max-width: 991px) {
+  .hero .hero_content .hero_text .search_area h3 {
+    font-weight: 500;
+    font-size: 22px;
+  }
+  .hero .hero_content .hero_text .search_area .search_btn {
+    padding: 10px 0;
+  }
+}
+/* Small Screens */
+@media only screen and (max-width: 480px) {
+  .hero {
+    padding: 100px 0;
+  }
+  .hero .hero_content {
+    flex-direction: column-reverse;
+  }
+  .hero .hero_content .hero_text,
+.hero .hero_content .hero_image {
+    width: 100%;
+  }
+  .hero .hero_content .hero_text h1 {
+    font-weight: 700;
+    font-size: 34px;
+  }
+  .hero .hero_content .hero_text .search_area {
+    width: 90%;
+  }
+}
