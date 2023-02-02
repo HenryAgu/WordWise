@@ -74,3 +74,48 @@
   top: 0;
   left: 0;
 }
+
+/* Responsiveness starts here */
+/* Large Screens */
+@media screen and (max-width: 1024px) {
+  .feature_container .feature h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .feature_container .feature .feature_card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .feature_container .feature_section {
+    width: 80%;
+    padding: 30px;
+  }
+  .feature_container .feature_section .feature_section_text {
+    width: 60%;
+  }
+}
+/* medium screens */
+@media (max-width: 991px) {
+  .feature_container .feature .feature_card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .feature_container .feature_section .feature_section_text {
+    width: 50%;
+  }
+  .feature_container .feature_section .feature_section_text h2 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+/* Small Screens */
+@media only screen and (max-width: 480px) {
+  .feature_container .feature .feature_card .feature_image img {
+    width: 60%;
+  }
+  .feature_container .feature_section {
+    flex-direction: column;
+  }
+  .feature_container .feature_section .feature_section_text {
+    width: 100%;
+    text-align: center;
+  }
+}

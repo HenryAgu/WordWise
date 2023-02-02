@@ -11,4 +11,6 @@ footer .footer_text p {
   font-size: 18px;
   line-height: 31px;
   color: #000000;
+  width: 92%;
+  margin: 0 auto;
 }
