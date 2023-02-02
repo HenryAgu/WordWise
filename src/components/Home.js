@@ -1,5 +1,8 @@
 import React from "react";
+
+// Components
 import Benefits from "../sub components/Benefits";
+import CustomerReview from "../sub components/CustomerReview";
 import Hero from "../sub components/Hero";
 import HowItWorks from "../sub components/HowItWorks";
 
@@ -12,6 +15,7 @@ const Home = () => {
       <Hero />
       <HowItWorks />
       <Benefits/>
+      <CustomerReview/>
     </div>
   );
 };

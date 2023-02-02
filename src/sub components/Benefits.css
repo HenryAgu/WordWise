@@ -48,6 +48,7 @@
 }
 .benefit_container .benefit_boxes {
   margin: 0 auto;
+  padding-top: 50px;
   width: 92%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -64,6 +65,7 @@
   font-size: 32px;
   line-height: 52px;
   color: #000000;
+  margin-bottom: 10px;
 }
 .benefit_container .benefit_boxes .inner_box p {
   font-family: "DM Sans";
@@ -73,6 +75,8 @@
   line-height: 26px;
   text-align: center;
   color: #676767;
+  margin: 0 auto;
+  width: 60%;
 }
 .benefit_container .benefit_boxes .benefit_box1 {
   background: #fff4f3;
