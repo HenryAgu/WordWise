@@ -1,4 +1,79 @@
-.header{
+/* DM Sans Google Font */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+.header {
+  background-color: #f4f8fa;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  .header_nav {
     width: 92%;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .search_bar {
+      display: flex;
+      align-items: center;
+
+      .search_box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #002233;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        padding: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        input {
+          border: none;
+          outline: none;
+          background: transparent;
+          width: 300px;
+          font-family: "DM Sans";
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 31px;
+          color: #555555;
+        }
+      }
+      button{
+        padding: 10px;
+        cursor: pointer;
+        border: 1px solid #002233;
+        background-color: #002233;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+
+        .search_icon{
+            color: white;
+            font-size: 20px;
+        }
+    }
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      p {
+        font-family: "DM Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 31px;
+        color: #676767;
+      }
+    }
+  }
 }

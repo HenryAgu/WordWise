@@ -3,7 +3,7 @@ import Header from './dictionaryPage components/Header'
 
 const DictionaryPage = () => {
   return (
-    <div className='header'>
+    <div>
         <Header/>
     </div>
   )
