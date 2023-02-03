@@ -72,14 +72,6 @@ const Header = () => {
           </p>
         </div>
       </div>
-      <footer>
-      <div className="footer_logo">
-            <img src={Logo} alt="" />
-        </div>
-        <div className="footer_text">
-            <p>Copyright © 2023 Synonym Finder • All Rights Reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 };

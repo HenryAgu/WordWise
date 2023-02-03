@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 
 // components
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 // Router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -26,7 +27,7 @@ const App = () => {
           <Routes>
             <Route path="/dictionary_page" element={<DictionaryPage/>}/>
           </Routes>
-
+          <Footer/>
         </BrowserRouter>
       </div>
     </>

@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
 
 .header {
-
   .header_nav {
     width: 92%;
     padding-top: 5px;
@@ -126,6 +125,69 @@
         font-weight: 500;
         font-size: 15px;
         line-height: 26px;
+      }
+    }
+  }
+}
+
+/* Responsiveness starts here */
+/* Large Screens */
+@media screen and (max-width: 1024px) {
+  .header {
+    .header_body {
+      gap: 20px;
+    }
+  }
+}
+
+/* medium screens */
+@media (max-width: 991px) {
+  .header {
+    .header_nav {
+      .menu {
+        display: none;
+      }
+    }
+    .header_body {
+      align-items: center;
+      margin-bottom: 300px;
+      .header_body_text {
+        width: 50%;
+        h1 {
+          font-size: 32px;
+          line-height: 42px;
+        }
+      }
+      .header_body_card{
+        width: 50%;
+      }
+    }
+  }
+}
+
+
+/* Small Screens */
+@media only screen and (max-width: 480px) {
+  .header{
+    .header_nav{
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      gap: 10px;
+      padding: 10px;
+      .search_bar{
+        .search_box{
+          input{
+            width: 100%;
+          }
+        }
+      }
+    }
+    .header_body{
+      flex-direction: column;
+      margin-bottom: 100px;
+      .header_body_card,.header_body_text{
+        width: 90%;
       }
     }
   }
