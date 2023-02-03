@@ -1,13 +1,5 @@
 /* DM Sans Google Font */
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
-.header {
-  background-color: #f4f8fa;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
-}
 .header .header_nav {
   width: 92%;
   padding-top: 5px;
@@ -16,6 +8,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #ffffff;
 }
 .header .header_nav .search_bar {
   display: flex;
@@ -68,4 +66,52 @@
   font-size: 18px;
   line-height: 31px;
   color: #676767;
+}
+.header .header_body {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  display: flex;
+  gap: 50px;
+}
+.header .header_body .header_body_text {
+  width: 65%;
+}
+.header .header_body .header_body_text h1 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 65px;
+  line-height: 85px;
+  color: #000000;
+}
+.header .header_body .header_body_text p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 31px;
+  color: #939393;
+}
+.header .header_body .header_body_card {
+  width: 35%;
+  background: #002233;
+  border-radius: 6px;
+  padding: 20px;
+  color: #ffffff;
+}
+.header .header_body .header_body_card h3 {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+}
+.header .header_body .header_body_card p {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 26px;
 }

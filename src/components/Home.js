@@ -7,6 +7,7 @@ import CustomerReview from "../components/home components/CustomerReview";
 import Feature from "../components/home components/Feature";
 import Hero from "../components/home components/Hero";
 import HowItWorks from "../components/home components/HowItWorks";
+import Footer from "../components/Footer";
 
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <Benefits/>
       <CustomerReview/>
       <Feature/>
+      <Footer/>
     </div>
   );
 };

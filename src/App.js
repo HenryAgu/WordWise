@@ -8,7 +8,6 @@ import Home from "./components/Home";
 
 // Router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Footer from "./components/Footer";
 import DictionaryPage from "./components/DictionaryPage";
 
 const App = () => {
@@ -27,7 +26,7 @@ const App = () => {
           <Routes>
             <Route path="/dictionary_page" element={<DictionaryPage/>}/>
           </Routes>
-          <Footer/>
+
         </BrowserRouter>
       </div>
     </>
