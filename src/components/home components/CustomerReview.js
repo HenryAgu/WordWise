@@ -4,9 +4,9 @@
 import "./CustomerReview.css";
 
 // assets
-import review1 from "../assets/review1.svg";
-import review2 from "../assets/review2.svg";
-import review3 from "../assets/review3.svg";
+import review1 from "../../assets/review1.svg";
+import review2 from "../../assets/review2.svg";
+import review3 from "../../assets/review3.svg";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";

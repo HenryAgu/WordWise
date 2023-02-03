@@ -4,7 +4,7 @@ import React from "react";
 import "./Hero.css";
 
 // assets
-import HeroImage from "../assets/Hero.svg";
+import HeroImage from "../../assets/Hero.svg";
 
 // Navlink
 import { Link } from "react-router-dom";
@@ -45,7 +45,7 @@ const Hero = () => {
                 </span>
               </p>
             </div>
-            <Link to="/" className="search_btn">
+            <Link to="/dictionary_page" className="search_btn">
               Get Started
             </Link>
           </div>

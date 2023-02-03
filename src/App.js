@@ -4,12 +4,12 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 // components
-import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 
 // Router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
+import DictionaryPage from "./components/DictionaryPage";
 
 const App = () => {
   return (
@@ -21,9 +21,11 @@ const App = () => {
       </Helmet>
       <div className="app">
         <BrowserRouter>
-          <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+          </Routes>
+          <Routes>
+            <Route path="/dictionary_page" element={<DictionaryPage/>}/>
           </Routes>
           <Footer/>
         </BrowserRouter>

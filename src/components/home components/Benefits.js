@@ -4,9 +4,9 @@ import React from "react";
 import "./Benefits.css";
 
 // assets
-import benefitLogo from "../assets/Benefitlogo.svg";
-import benefitImage1 from "../assets/benefitImage1.svg";
-import benefitImage2 from "../assets/benefitImage2.svg";
+import benefitLogo from "../../assets/Benefitlogo.svg";
+import benefitImage1 from "../../assets/benefitImage1.svg";
+import benefitImage2 from "../../assets/benefitImage2.svg";
 
 const Benefits = () => {
   return (

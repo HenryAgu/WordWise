@@ -7,16 +7,16 @@ import "./Feature.css";
 import { Link } from "react-router-dom";
 
 // assets
-import feature1 from "../assets/feature1.svg";
-import feature2 from "../assets/feature2.svg";
-import feature3 from "../assets/feature3.svg";
-import feature4 from "../assets/feature4.svg";
-import feature5 from "../assets/feature5.svg";
-import feature6 from "../assets/feature6.svg";
-import feature7 from "../assets/feature7.svg";
-import feature8 from "../assets/feature8.svg";
-import feature9 from "../assets/feature9.svg";
-import feature10 from "../assets/feature10.svg";
+import feature1 from "../../assets/feature1.svg";
+import feature2 from "../../assets/feature2.svg";
+import feature3 from "../../assets/feature3.svg";
+import feature4 from "../../assets/feature4.svg";
+import feature5 from "../../assets/feature5.svg";
+import feature6 from "../../assets/feature6.svg";
+import feature7 from "../../assets/feature7.svg";
+import feature8 from "../../assets/feature8.svg";
+import feature9 from "../../assets/feature9.svg";
+import feature10 from "../../assets/feature10.svg";
 
 const Feature = () => {
   return (
@@ -64,7 +64,7 @@ const Feature = () => {
           </h2>
         </div>
         <div className="get_started">
-          <Link to="/" className="get_started_btn">
+          <Link to="/dictionary_page" className="get_started_btn">
             Try Synonym Finder for Free
           </Link>
         </div>
