@@ -1,0 +1,130 @@
+// second left side screen for the body
+.second_header_body_text {
+  width: 65%;
+  .header_body_text_top {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    .inner_top {
+      background: #dddddd;
+      padding: 0 30px;
+      border-radius: 4px;
+      font-family: "DM Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 31px;
+      color: #454545;
+    }
+    .top_one {
+      background: #002233;
+      color: #ffffff;
+    }
+  }
+  .result {
+    margin-top: 30px;
+    .result_card {
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        h3 {
+          font-family: "DM Sans";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 35px;
+          line-height: 55px;
+          color: #000000;
+        }
+        p {
+          background: #daf4ff;
+          border-radius: 45px;
+          padding: 5px 15px;
+          font-family: "DM Sans";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 23px;
+          color: #002233;
+        }
+      }
+      .result_text {
+        margin-top: -30px;
+        span {
+          font-weight: 700;
+        }
+        p {
+          font-family: "DM Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 147.2%;
+          color: #000000;
+        }
+        .usage {
+          font-style: italic;
+        }
+      }
+      .line {
+        background-color: #dfdfdf;
+        height: 1px;
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+/* medium screens */
+@media (max-width: 991px) {
+  .second_header_body_text {
+    width: 50%;
+
+    .header_body_text_top {
+        gap: 10px;
+        justify-content: space-between;
+      .inner_top {
+        font-size: 16px;
+        line-height: 21px;
+        padding: 0 10px;
+      }
+    }
+    .result {
+      margin-top: 20px;
+      .result_card {
+        .title {
+          h3 {
+            font-size: 28px;
+            line-height: 36px;
+          }
+          p {
+            font-size: 14px;
+            line-height: 18px;
+          }
+        }
+        .result_text {
+          p {
+            font-size: 16px;
+            line-height: 147.2%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* Small Screens */
+@media only screen and (max-width: 480px) {
+    .second_header_body_text{
+        width: 100%;
+
+        .header_body_text_top{
+
+            .inner_top{
+                padding: 0 15px;
+            }
+        }
+    }
+}

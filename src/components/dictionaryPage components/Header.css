@@ -100,6 +100,7 @@
   border-radius: 6px;
   padding: 20px;
   color: #ffffff;
+  height: fit-content;
 }
 .header .header_body .header_body_card h3 {
   font-family: "DM Sans";
@@ -159,7 +160,8 @@
     flex-direction: column;
     margin-bottom: 100px;
   }
-  .header .header_body .header_body_card, .header .header_body .header_body_text {
+  .header .header_body .header_body_card,
+.header .header_body .header_body_text {
     width: 90%;
   }
 }

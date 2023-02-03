@@ -3,6 +3,9 @@ import React from "react";
 // stylesheet
 import "./Header.css";
 
+// components
+import ResultPage from "./ResultPage";
+
 // Navlink
 import { Link } from "react-router-dom";
 
@@ -14,6 +17,7 @@ import { FaSistrix } from "react-icons/fa";
 
 // assets
 import Logo from "../../assets/Logo.svg";
+
 
 const Header = () => {
   return (
@@ -40,7 +44,8 @@ const Header = () => {
         </div>
       </div>
       <div className="header_body">
-        <div className="header_body_text">
+        {/* first left side screen for the body */}
+        {/* <div className="header_body_text">
           <h1>
             <Typewriter
               words={["Be confident in your writing and speaking."]}
@@ -56,7 +61,9 @@ const Header = () => {
             Wordwise assist you in avoiding using the same word excessively
             frequently, redundantly, frequently, endlessly, etc.
           </p>
-        </div>
+        </div> */}
+        {/* second left side screen for the body */}
+        <ResultPage/>
         <div className="header_body_card">
           <h3>Why Word-Wise can be Useful?</h3>
           <p>
