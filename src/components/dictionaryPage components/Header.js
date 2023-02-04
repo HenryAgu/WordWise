@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 // stylesheet
 import "./Header.css";
+
+// axios
+import axios from "axios";
 
 // components
 import ResultPage from "./ResultPage";
@@ -18,8 +21,18 @@ import { FaSistrix } from "react-icons/fa";
 // assets
 import Logo from "../../assets/Logo.svg";
 
-
 const Header = () => {
+  //   user input for search
+  const [search, setSearch] = useState("");
+  const [data, setData] = useState([]);
+    const searchWordHandler = () =>{
+        axios
+          .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${search}`)
+          .then((res) => {
+            console.log(res.data);
+            setData();
+          });
+    }
   return (
     <div className="header">
       <div className="header_nav">
@@ -31,9 +44,14 @@ const Header = () => {
         <div className="search_bar">
           <div className="search_box">
             <FaSistrix />
-            <input type="text" placeholder="Search for any word or phrase" />
+            <input
+              type="text"
+              placeholder="Search for any word or phrase"
+              onChange={(e) => setSearch(e.target.value)}
+              required
+            />
           </div>
-          <button>
+          <button onClick={searchWordHandler}>
             <FaSistrix className="search_icon" />
           </button>
         </div>
@@ -45,25 +63,28 @@ const Header = () => {
       </div>
       <div className="header_body">
         {/* first left side screen for the body */}
-        {/* <div className="header_body_text">
-          <h1>
-            <Typewriter
-              words={["Be confident in your writing and speaking."]}
-              loop={2}
-              cursor
-              cursorStyle="|"
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1000}
-            />
-          </h1>
-          <p>
-            Wordwise assist you in avoiding using the same word excessively
-            frequently, redundantly, frequently, endlessly, etc.
-          </p>
-        </div> */}
         {/* second left side screen for the body */}
-        <ResultPage/>
+        {data.length>=1 ? (
+          <ResultPage data={data} />
+        ) : (
+          <div className="header_body_text">
+            <h1>
+              <Typewriter
+                words={["Be confident in your writing and speaking."]}
+                loop={2}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </h1>
+            <p>
+              Wordwise assist you in avoiding using the same word excessively
+              frequently, redundantly, frequently, endlessly, etc.
+            </p>
+          </div>
+        )}
         <div className="header_body_card">
           <h3>Why Word-Wise can be Useful?</h3>
           <p>
