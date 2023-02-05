@@ -72,7 +72,7 @@ const Header = () => {
             <h1>
               <Typewriter
                 words={["Be confident in your writing and speaking."]}
-                loop={2}
+                loop={5}
                 cursor
                 cursorStyle="|"
                 typeSpeed={70}
