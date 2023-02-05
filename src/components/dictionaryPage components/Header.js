@@ -30,7 +30,8 @@ const Header = () => {
           .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${search}`)
           .then((res) => {
             console.log(res.data);
-            setData();
+            console.log(res.data[0]);
+            setData(res.data);
           });
     }
   return (
@@ -83,8 +84,7 @@ const Header = () => {
               Wordwise assist you in avoiding using the same word excessively
               frequently, redundantly, frequently, endlessly, etc.
             </p>
-          </div>
-        )}
+          </div>)}
         <div className="header_body_card">
           <h3>Why Word-Wise can be Useful?</h3>
           <p>
