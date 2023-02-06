@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // stylesheet
 import "./Feature.css";
 
 // Navlink
 import { Link } from "react-router-dom";
+
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // assets
 import feature1 from "../../assets/feature1.svg";
@@ -19,6 +23,11 @@ import feature9 from "../../assets/feature9.svg";
 import feature10 from "../../assets/feature10.svg";
 
 const Feature = () => {
+  // AOS animation
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div className="feature_container">
       <div className="feature">
@@ -56,7 +65,11 @@ const Feature = () => {
           </div>
         </div>
       </div>
-      <div className="feature_section">
+      <div
+        className="feature_section"
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+      >
         <div className="feature_section_text">
           <h2>
             Enhance Your Writing, Expand Your Word Choice, Improve Your

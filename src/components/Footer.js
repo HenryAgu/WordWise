@@ -10,7 +10,10 @@ const Footer = () => {
   return (
     <footer>
         <div className="footer_logo">
-            <img src={footerLogo} alt="" />
+        <a href="#top">
+            <img src={footerLogo} alt="Logo" />
+          </a>
+
         </div>
         <div className="footer_text">
             <p>Copyright © 2023 Synonym Finder • All Rights Reserved.</p>

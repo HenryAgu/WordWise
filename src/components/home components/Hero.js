@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // stylesheet
 import "./Hero.css";
+
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+// // GSAP
+// import { gsap, Power2 } from "gsap";
 
 // assets
 import HeroImage from "../../assets/Hero.svg";
@@ -16,10 +23,25 @@ import { FaSistrix } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
+  // // gsap variable
+  // let leftHero = useRef(null)
+  // let rightHero = useRef(null)
+
+  // AOS animation
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div className="hero" id="top">
       <div className="hero_content">
-        <div className="hero_text">
+        <div
+          className="hero_text"
+          data-aos="fade-left"
+          data-aos-duration="1500"
+          data-aos-delay="4000"
+        >
           <h1>Get the synonyms & Antonyms of any words of your choice</h1>
           <p>
             With more than 500000 synonyms and antonyms. Get as many synonyms
@@ -34,7 +56,13 @@ const Hero = () => {
                 <span>
                   {" "}
                   <Typewriter
-                    words={["Dance", "Delighted","Substandard","Enormous","Ecstatic"]}
+                    words={[
+                      "Dance",
+                      "Delighted",
+                      "Substandard",
+                      "Enormous",
+                      "Ecstatic",
+                    ]}
                     loop={5}
                     cursor
                     cursorStyle="_"
@@ -50,7 +78,12 @@ const Hero = () => {
             </Link>
           </div>
         </div>
-        <div className="hero_image">
+        <div
+          className="hero_image"
+          data-aos="fade-down"
+          data-aos-duration="1500"
+          data-aos-delay="2000"
+        >
           <img src={HeroImage} alt="" />
         </div>
       </div>

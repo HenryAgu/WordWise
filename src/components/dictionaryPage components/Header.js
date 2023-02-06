@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // stylesheet
 import "./Header.css";
+
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 // axios
 import axios from "axios";
@@ -25,15 +29,20 @@ const Header = () => {
   //   user input for search
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
-    const searchWordHandler = () =>{
-        axios
-          .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${search}`)
-          .then((res) => {
-            console.log(res.data);
-            console.log(res.data[0]);
-            setData(res.data);
-          });
-    }
+  const searchWordHandler = () => {
+    axios
+      .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${search}`)
+      .then((res) => {
+        console.log(res.data);
+        console.log(res.data[0]);
+        setData(res.data);
+      });
+  };
+  // AOS animation
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <div className="header">
       <div className="header_nav">
@@ -65,10 +74,19 @@ const Header = () => {
       <div className="header_body">
         {/* first left side screen for the body */}
         {/* second left side screen for the body */}
-        {data.length>=1 ? (
-          <ResultPage data={data} />
+        {data.length >= 1 ? (
+          <ResultPage
+            data={data}
+            data-aos="fade-down-right"
+            data-aos-duration="1000"
+            data-aos-delay="1000"
+          />
         ) : (
-          <div className="header_body_text">
+          <div
+            className="header_body_text"
+            data-aos="fade-down-right"
+            data-aos-duration="1000"
+          >
             <h1>
               <Typewriter
                 words={["Be confident in your writing and speaking."]}
@@ -84,8 +102,13 @@ const Header = () => {
               Wordwise assist you in avoiding using the same word excessively
               frequently, redundantly, frequently, endlessly, etc.
             </p>
-          </div>)}
-        <div className="header_body_card">
+          </div>
+        )}
+        <div
+          className="header_body_card"
+          data-aos-duration="1000"
+          data-aos-delay="2000"
+        >
           <h3>Why Word-Wise can be Useful?</h3>
           <p>
             Synonyms can be incredibly useful for enhancing one's language
