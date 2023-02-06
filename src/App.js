@@ -23,8 +23,6 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-          </Routes>
-          <Routes>
             <Route path="/dictionary_page" element={<DictionaryPage/>}/>
           </Routes>
           <Footer/>

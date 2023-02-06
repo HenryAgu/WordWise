@@ -12,12 +12,6 @@ const ResultPage = ({ data }) => {
           <div className="inner_top top_one">
             <p>All Info</p>
           </div>
-          <div className="inner_top">
-            <p>Synonyms</p>
-          </div>
-          <div className="inner_top">
-            <p>Antonyms</p>
-          </div>
         </div>
         <div className="result">
           {data.map((data) => (
