@@ -113,7 +113,7 @@
     flex-direction: column-reverse;
   }
   .hero .hero_content .hero_text,
-.hero .hero_content .hero_image {
+  .hero .hero_content .hero_image {
     width: 100%;
   }
   .hero .hero_content .hero_text h1 {

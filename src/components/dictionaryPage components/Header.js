@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 
 // stylesheet
 import "./Header.css";
@@ -10,8 +10,7 @@ import "aos/dist/aos.css";
 // axios
 import axios from "axios";
 
-// components
-import ResultPage from "./ResultPage";
+
 
 // Navlink
 import { Link } from "react-router-dom";
@@ -25,17 +24,25 @@ import { FaSistrix } from "react-icons/fa";
 // assets
 import Logo from "../../assets/Logo.svg";
 
+// components
+// import ResultPage from "./ResultPage";
+const ResultPage = React.lazy(() => import("./ResultPage"));
+
 const Header = () => {
   //   user input for search
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
+  const [error, setError] = useState(false);
   const searchWordHandler = () => {
     axios
       .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${search}`)
-      .then((res) => {
-        console.log(res.data);
-        console.log(res.data[0]);
-        setData(res.data);
+      .then((response) => {
+        console.log(response.data);
+        console.log(response.data[0]);
+        setData(response.data);
+      })
+      .catch((error) => {
+        setError(true);
       });
   };
   // AOS animation
@@ -75,12 +82,15 @@ const Header = () => {
         {/* first left side screen for the body */}
         {/* second left side screen for the body */}
         {data.length >= 1 ? (
-          <ResultPage
-            data={data}
-            data-aos="fade-down-right"
-            data-aos-duration="1000"
-            data-aos-delay="1000"
-          />
+          <Suspense fallback={<div>Loading...</div>}>
+            <ResultPage
+              data={data}
+              error={error}
+              data-aos="fade-down-right"
+              data-aos-duration="1000"
+              data-aos-delay="1000"
+            />
+          </Suspense>
         ) : (
           <div
             className="header_body_text"

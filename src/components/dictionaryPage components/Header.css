@@ -161,7 +161,7 @@
     margin-bottom: 100px;
   }
   .header .header_body .header_body_card,
-.header .header_body .header_body_text {
+  .header .header_body .header_body_text {
     width: 90%;
   }
 }
