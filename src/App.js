@@ -1,15 +1,21 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 
 // React Helmet
 import { Helmet } from "react-helmet";
 
 // components
-import Home from "./components/Home";
 import Footer from "./components/Footer";
+
+// Pages
+// import Home from "./components/Home";
+// import DictionaryPage from "./components/DictionaryPage";
 
 // Router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import DictionaryPage from "./components/DictionaryPage";
+
+// React Lazy Pages
+const Home = lazy(() => import("./components/Home"));
+const DictionaryPage = lazy(() => import("./components/DictionaryPage"));
 
 const App = () => {
   return (
@@ -21,11 +27,13 @@ const App = () => {
       </Helmet>
       <div className="app">
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/dictionary_page" element={<DictionaryPage/>}/>
-          </Routes>
-          <Footer/>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/dictionary_page" element={<DictionaryPage />} />
+            </Routes>
+          </Suspense>
+          <Footer />
         </BrowserRouter>
       </div>
     </>

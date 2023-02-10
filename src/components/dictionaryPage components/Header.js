@@ -10,8 +10,6 @@ import "aos/dist/aos.css";
 // axios
 import axios from "axios";
 
-
-
 // Navlink
 import { Link } from "react-router-dom";
 
@@ -23,6 +21,10 @@ import { FaSistrix } from "react-icons/fa";
 
 // assets
 import Logo from "../../assets/Logo.svg";
+
+// Error Boundary
+import { ErrorBoundary } from "react-error-boundary";
+import ErrorFallBack from "../ErrorBoundary";
 
 // components
 // import ResultPage from "./ResultPage";
@@ -82,15 +84,17 @@ const Header = () => {
         {/* first left side screen for the body */}
         {/* second left side screen for the body */}
         {data.length >= 1 ? (
-          <Suspense fallback={<div>Loading...</div>}>
-            <ResultPage
-              data={data}
-              error={error}
-              data-aos="fade-down-right"
-              data-aos-duration="1000"
-              data-aos-delay="1000"
-            />
-          </Suspense>
+          <ErrorBoundary FallbackComponent={ErrorFallBack} onReset={()=> {}}>
+            <Suspense fallback={<div>Loading...</div>}>
+              <ResultPage
+                data={data}
+                error={error}
+                data-aos="fade-down-right"
+                data-aos-duration="1000"
+                data-aos-delay="1000"
+              />
+            </Suspense>
+          </ErrorBoundary>
         ) : (
           <div
             className="header_body_text"
