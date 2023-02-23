@@ -3,7 +3,7 @@ import React from "react";
 // stylesheet
 import "../dictionaryPage components/ResultPage.css";
 
-const ResultPage = ({ data, error }) => {
+const ResultPage = ({ data }) => {
   return (
     <>
       {/* second left side screen for the body */}

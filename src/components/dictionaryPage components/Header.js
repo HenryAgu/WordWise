@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect } from "react";
 
 // stylesheet
 import "./Header.css";
@@ -23,8 +23,8 @@ import { FaSistrix } from "react-icons/fa";
 import Logo from "../../assets/Logo.svg";
 
 // Error Boundary
-import { ErrorBoundary } from "react-error-boundary";
-import ErrorFallBack from "../ErrorBoundary";
+// import { ErrorBoundary } from "react-error-boundary";
+// import ErrorFallBack from "../ErrorBoundary";
 
 // components
 // import ResultPage from "./ResultPage";
@@ -34,7 +34,6 @@ const Header = () => {
   //   user input for search
   const [search, setSearch] = useState("");
   const [data, setData] = useState([]);
-  const [error, setError] = useState(false);
   const searchWordHandler = () => {
     axios
       .get(`https://api.dictionaryapi.dev/api/v2/entries/en/${search}`)
@@ -43,9 +42,6 @@ const Header = () => {
         console.log(response.data[0]);
         setData(response.data);
       })
-      .catch((error) => {
-        setError(true);
-      });
   };
   // AOS animation
   useEffect(() => {
@@ -83,19 +79,14 @@ const Header = () => {
       <div className="header_body">
         {/* first left side screen for the body */}
         {/* second left side screen for the body */}
-        {data.length >= 1 ? (
-          <ErrorBoundary FallbackComponent={ErrorFallBack} onReset={()=> {}}>
-            <Suspense fallback={<div>Loading...</div>}>
+        {data.length >= 1 ? 
               <ResultPage
                 data={data}
-                error={error}
                 data-aos="fade-down-right"
                 data-aos-duration="1000"
                 data-aos-delay="1000"
               />
-            </Suspense>
-          </ErrorBoundary>
-        ) : (
+         : 
           <div
             className="header_body_text"
             data-aos="fade-down-right"
@@ -117,7 +108,7 @@ const Header = () => {
               frequently, redundantly, frequently, endlessly, etc.
             </p>
           </div>
-        )}
+        }
         <div
           className="header_body_card"
           data-aos-duration="1000"
