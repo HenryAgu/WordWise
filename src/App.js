@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 
 // Router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 // React Lazy Pages
 const Home = lazy(() => import("./components/Home"));
@@ -27,6 +28,7 @@ const App = () => {
       </Helmet>
       <div className="app">
         <BrowserRouter>
+          <ScrollToTop/>
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
               <Route path="/" element={<Home />} />
