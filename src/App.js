@@ -13,6 +13,7 @@ import Footer from "./components/Footer";
 // Router
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import Preloader from "./components/Preloader";
 
 // React Lazy Pages
 const Home = lazy(() => import("./components/Home"));
@@ -29,7 +30,7 @@ const App = () => {
       <div className="app">
         <BrowserRouter>
           <ScrollToTop/>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Preloader/>}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/dictionary_page" element={<DictionaryPage />} />
