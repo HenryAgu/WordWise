@@ -1,7 +1,7 @@
 import React from "react";
 
 // stylesheet
-import "../dictionaryPage components/ResultPage.css";
+import "../dictionaryPage components/ResultPage.scss";
 
 const ResultPage = ({ data }) => {
   return (
