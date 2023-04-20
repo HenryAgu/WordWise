@@ -1,7 +1,7 @@
 import React from 'react';
 
 // stylesheet
-import './Footer.css';
+import './Footer.scss';
 
 // assets
 import footerLogo from '../assets/Logo.svg';

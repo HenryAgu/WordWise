@@ -1,7 +1,7 @@
 import React from "react";
 
 // stylesheet
-import "./Navbar.css";
+import "./Navbar.scss";
 
 // Navlink
 import { Link } from "react-router-dom";

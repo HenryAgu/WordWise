@@ -1,7 +1,7 @@
 import React from 'react'
 
 // stylesheet
-import './Preloader.css';
+import './Preloader.scss';
 
 // assets
 import PreloadImage from '../assets/Benefitlogo.svg';

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // stylesheet
-import "./Header.css";
+import "./Header.scss";
 
 // AOS
 import AOS from "aos";
